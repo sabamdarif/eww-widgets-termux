@@ -1,7 +1,7 @@
 /** Global *******************************************/
 *{
-	all: unset;
-	font-family: Iosevka;
+    all: unset;
+	font-family: Mononoki Nerd Font;
 }
 
 /** Generic window ***********************************/
@@ -56,8 +56,9 @@
 /** Uptime ********************************************/
 .icontimer {
 	color: #B48EAD;
-	font-size : 87px;
+	font-size : 82px;
 	font-weight : normal;
+    margin-right: 8px;
 }
 
 .uphour {

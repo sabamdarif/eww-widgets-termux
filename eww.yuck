@@ -43,8 +43,8 @@
 		(box :orientation "h" :halign "center" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 			(label :class "icontimer" :valign "center" :text "祥")
 			(box :orientation "v" :valign "center" :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "uphour" :halign "start" :wrap "true" :limit-width 25 :text UPHOUR)
-				(label :class "upmin" :halign "start" :wrap "true" :limit-width 25 :text UPMIN)))))
+				(label :class "uphour" :halign "end" :wrap "true" :limit-width 25 :text UPHOUR)
+				(label :class "upmin" :halign "end" :wrap "true" :limit-width 25 :text UPMIN)))))
 
 ;; ** Windows *************************************************************************
 ;; profile
