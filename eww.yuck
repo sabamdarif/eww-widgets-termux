@@ -15,8 +15,8 @@
 (defpoll DAY :interval "5s" "date +%a")
 
 ;; Uptime vars
-(defpoll UPHOUR :interval "5s" "uptime -p | awk '{print $2 \" \" $3}' | sed 's/,//g'")
-(defpoll UPMIN :interval "5s" "uptime -p | awk '{print $4 \" \" $5}'")
+(defpoll UPHOUR :interval "5s" "uptime -p | awk '{print $2, $3}' | tr -d ','")
+(defpoll UPMIN :interval "5s" "uptime -p | awk '{print $4, $5}' | tr -d ','")
 
 ;; ** Widgets *************************************************************************
 ;; profile
@@ -41,7 +41,7 @@
 (defwidget uptime [] 
 	(box :class "genwin" 
 		(box :orientation "h" :halign "center" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			(label :class "icontimer" :valign "center" :text "")
+			(label :class "icontimer" :valign "center" :text "")
 			(box :orientation "v" :valign "center" :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false" 
 				(label :class "uphour" :halign "end" :wrap "true" :limit-width 25 :text UPHOUR)
 				(label :class "upmin" :halign "end" :wrap "true" :limit-width 25 :text UPMIN)))))
@@ -54,10 +54,10 @@
 
 ;; clock
 (defwindow clock :stacking "bg" :monitor 0 :focusable "false" :screen 1 :windowtype "desktop"
-	    :geometry (geometry :x 1265 :y 125 :width 300 :height 150)
+	    :geometry (geometry :x 1265 :y 140 :width 300 :height 150)
 					(clock))
 
 ;; uptime
 (defwindow uptime :stacking "bg" :monitor 0 :focusable "false" :screen 1 :windowtype "desktop"
-	    :geometry (geometry :x 1265 :y 320 :width 300 :height 150)
+	    :geometry (geometry :x 1265 :y 330 :width 300 :height 120)
 					(uptime))
